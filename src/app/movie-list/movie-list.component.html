@@ -1,0 +1,7 @@
+<ol *appDisplayMovies="showMovies">
+    <li *ngFor="let movie of movies; let i = index">
+        <p *ngIf="i === 0" appHightLight>{{movie.title}}</p>
+        <p *ngIf="i !== 0">{{movie.title}}</p>
+        <p *ngIf="movie.date">({{ movie.date }})</p>
+    </li>
+</ol>
